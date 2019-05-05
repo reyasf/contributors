@@ -54,7 +54,11 @@ class contributors {
         $allowed_roles = array('editor', 'administrator', 'author');
         foreach($users as $user){
             if( array_intersect($allowed_roles, $user->roles ) ) {
-                print ('<tr><td><input type="checkbox" name="contributors[]" value="'.$user->ID.'" />'.$user->display_name.'</td></tr>');
+                $checked = "";
+                if(in_array($user->ID,$meta)) {
+                    $checked = "checked";
+                }
+                print ('<tr><td><input type="checkbox" name="contributors[]" value="'.$user->ID.'" '.$checked.' />'.$user->display_name.'</td></tr>');
             }
         }
         print ('</table>');
