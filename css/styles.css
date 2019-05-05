@@ -1,0 +1,29 @@
+.contributors-box {
+    border: 1px solid #EFEFEF;
+    padding:20px;
+}
+
+.contributors-box .section_title {
+    font-size:16px;
+    font-weight:bold;
+    line-height:40px;
+    border-bottom:1px solid #EFEFEF;
+    margin-bottom: 10px;
+}
+
+.contributors-box .contributors {
+    width:100%;
+    display:inline-block;
+}
+
+.contributors-box .contributors .gravatar,
+.contributors-box .contributors .display_name {
+    float:left;
+}
+
+.contributors-box .contributors .gravatar {
+    position: relative;
+    width:16px;
+    height:16px;
+    margin-right:10px;
+}
